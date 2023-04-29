@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoints: {fileID: 1741328324}
-  _enemyGameObject: {fileID: 9115710024866586991, guid: 6d4e717a91356af48a613ba337b9d9d9, type: 3}
+  _enemy: {fileID: 6554601565614710250, guid: 6d4e717a91356af48a613ba337b9d9d9, type: 3}
   _frequencyOfSpawn: 2
 --- !u!1 &775614901
 GameObject:

@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
 
     private void Destroy()
     {
-        Destroy(gameObject, Frequency + 2f);
+        float addedTimeToDestroy = 2f;
+
+        Destroy(gameObject, Frequency + addedTimeToDestroy);
     }
 }
