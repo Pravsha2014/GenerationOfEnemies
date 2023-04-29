@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class SpawnEnemies : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoints;
-    [SerializeField] private GameObject _enemyGameObject;
+    [SerializeField] private Enemy _enemy;
     [SerializeField] private float _frequencyOfSpawn;
 
     private Transform[] _points;
@@ -30,9 +29,9 @@ public class SpawnEnemies : MonoBehaviour
 
         while (_currentPoint < _points.Length)
         {
-            GameObject newEnemy = Instantiate(_enemyGameObject, _points[_currentPoint].position, Quaternion.identity);
+            Enemy spawnedEnemy = Instantiate(_enemy, _points[_currentPoint].position, Quaternion.identity);
 
-            if(newEnemy.TryGetComponent(out Enemy enemy))
+            if(spawnedEnemy.TryGetComponent(out Enemy enemy))
             {
                 enemy.SetFrequencyValue(_frequencyOfSpawn);
             }
