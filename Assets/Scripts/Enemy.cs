@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private void OnEnable()
     {
-        Destroy();
+        DestroyWithDelay();
     }
 
     public float Frequency { get; private set; }
@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
         Frequency = frequency;
     }
 
-    private void Destroy()
+    private void DestroyWithDelay()
     {
         float addedTimeToDestroy = 2f;
 
