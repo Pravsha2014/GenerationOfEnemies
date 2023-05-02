@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnEnemies : MonoBehaviour
+public class EnemiesSpawner : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoints;
     [SerializeField] private Enemy _enemy;
@@ -20,7 +20,7 @@ public class SpawnEnemies : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            StartCoroutine();
+            RunCoroutine();
     }
 
     private IEnumerator FadeIn()
@@ -42,7 +42,7 @@ public class SpawnEnemies : MonoBehaviour
         }
     }
 
-    private void StartCoroutine()
+    private void RunCoroutine()
     {
         if (_coroutine != null)
             StopCoroutine(_coroutine);
